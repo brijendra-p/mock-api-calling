@@ -1,0 +1,16 @@
+<div
+  [ngStyle]="{ height: 44 + 'px', width: 200 + 'px' }"
+  *ngIf="isLoading"
+>
+  <img [src]="loader" />
+</div>
+<img
+  [src]="image"
+  [ngStyle]="{
+    visibility: isLoading ? 'hidden' : '',
+    height: height + 'px',
+    width: width + 'px'
+  }"
+  (load)="hideLoader()"
+  (error)="hideLoader()"
+/>

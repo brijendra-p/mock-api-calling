@@ -1,0 +1,17 @@
+<div class="container w-75 mt-3">
+  <div class="row">
+    <div
+      class="card m-2 shadow"
+      style="width: 18rem"
+      *ngFor="let item of items"
+    >
+      <div class="card-body">
+        <app-image-with-loading image="{{ item.url }}">
+        </app-image-with-loading>
+        <h5 class="card-title mt-3">{{ item.itemName }}</h5>
+
+        <h5 class="card-title">Rs:{{ item.itemPrice }}/-</h5>
+      </div>
+    </div>
+  </div>
+</div>
